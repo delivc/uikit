@@ -14,7 +14,7 @@ import {
 } from 'evergreen-ui'
 import { useForm, Controller } from 'react-hook-form'
 
-export type Props = {
+export type ForgotPasswordViewProps = {
   onSubmit: Function
   loginLink: string
   signUpLink: string
@@ -29,7 +29,7 @@ export type ErrorMessage = {
   message: string
 }
 
-const Forgot: React.FC<Props> = (props) => {
+const ForgotPasswordView: React.FC<ForgotPasswordViewProps> = (props) => {
   const { control, errors, handleSubmit } = useForm<FormData>()
 
   let [loading, setLoading] = useState<boolean>(false)
@@ -137,4 +137,4 @@ const Forgot: React.FC<Props> = (props) => {
   )
 }
 
-export default Forgot
+export default ForgotPasswordView

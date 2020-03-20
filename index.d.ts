@@ -17,4 +17,12 @@ declare module '@delivc/uikit' {
   }
 
   export class Topnav extends React.Component<TopnavProps> {}
+
+  export interface ForgotPasswordViewProps {
+    onSubmit: Function
+    loginLink: string
+    signUpLink: string
+  }
+
+  export const ForgotPasswordView: React.FC<ForgotPasswordViewProps> = (props) => {}
 }
