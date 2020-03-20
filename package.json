@@ -1,5 +1,5 @@
 {
-  "name": "uikit",
+  "name": "@delivc/uikit",
   "version": "1.0.0",
   "description": "delivc react UI KIT based upon evergreen",
   "author": "juliankoehn",
@@ -25,7 +25,6 @@
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
-    "deploy": "gh-pages -d example/build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
