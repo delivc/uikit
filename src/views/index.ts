@@ -1,7 +1,9 @@
-import Forgot from './identity/forgot'
-import Login from './identity/login'
-import SignUp from './identity/signup'
-import Verify from './identity/verify'
+export {
+  ForgotPasswordView,
+  LoginView,
+  SignupView,
+  VerifyView
+} from './identity'
 
 import UserSettings from './settings/user/user'
 
@@ -11,10 +13,6 @@ import TeamSettingsGeneral from './team/settings/general'
 import TeamSettingsInvite from './team/settings/invite'
 
 export {
-  Forgot,
-  Login,
-  SignUp,
-  Verify,
   UserSettings,
   Teams,
   TeamSettingsAccessManagement,
