@@ -1,9 +1,3 @@
-import { Navbar } from "./navbar"
-import { Topnav } from "./topnav"
-import { Sidenav } from './sidenav'
-
-export {
-  Navbar,
-  Topnav,
-  Sidenav
-}
+export { Navbar } from './navbar'
+export { Topnav } from './topnav'
+export { Sidenav } from './sidenav'
