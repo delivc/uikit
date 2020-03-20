@@ -1,6 +1,6 @@
 {
   "name": "@delivc/uikit",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "delivc react UI KIT based upon evergreen",
   "author": "juliankoehn",
   "license": "MIT",
@@ -22,13 +22,17 @@
   "scripts": {
     "test": "xo && ava",
     "test:watch": "react-scripts-ts test --env=jsdom",
-    "build": "rollup -c",
-    "start": "rollup -c -w",
+    "build-commonjs": "BABEL_ENV=commonjs babel src --out-dir commonjs --ignore '**/stories','**/test' --source-maps inline --extensions .ts,.tsx",
+    "build-esm": "BABEL_ENV=esm babel src --out-dir esm --ignore '**/stories','**/test' --source-maps inline --extensions .ts,.tsx",
+    "build-umd": "rollup -c",
+    "build": "concurrently --names 'commonjs,esm,umd' 'yarn build-commonjs' 'yarn build-esm' 'yarn build-umd'",
+    "release": "np",
     "prepare": "yarn run build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@babel/cli": "^7.8.4",
     "@babel/runtime": "^7.1.2",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
@@ -72,6 +76,7 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^7.1.5",
     "babel-runtime": "^6.26.0",
+    "concurrently": "^5.1.0",
     "cross-env": "^5.1.4",
     "css-loader": "^3.4.2",
     "eslint-config-prettier": "^6.10.0",
@@ -79,6 +84,7 @@
     "eslint-config-xo-typescript": "^0.26.0",
     "eslint-plugin-react": "^7.19.0",
     "node-sass": "^4.13.1",
+    "np": "^6.2.0",
     "prettier": "^1.19.1",
     "react": "^16.4.1",
     "react-docgen-typescript-loader": "^3.7.1",

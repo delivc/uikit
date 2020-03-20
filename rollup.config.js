@@ -24,37 +24,34 @@ const namedExports = {
 const ignoreSSR = {
   ssr: './ssr/index.umd.js'
 }
-export default [
-  // UMD Developement
-  {
-    input: 'src/index.ts',
-    external,
-    output: {
-      file: 'umd/uikit.js',
-      format: 'umd',
-      name: 'UIKit',
-      indent: false,
-      globals: {
-        react: 'React',
-        'react-dom': 'ReactDOM',
-        'prop-types': 'PropTypes'
-      }
-    },
-    plugins: [
-      replace({
-        'process.env.NODE_ENV': JSON.stringify('development'),
-        ...ignoreSSR
-      }),
-      resolve(),
-      typescript({
-        rollupCommonJSResolveHack: true,
-        clean: true
-      }),
-      commonjs({
-        include: 'node_modules/**',
-        namedExports
-      }),
-      terser()
-    ]
-  }
-]
+export default {
+  input: 'src/index.ts',
+  external,
+  output: {
+    file: 'umd/uikit.js',
+    format: 'umd',
+    name: 'UIKit',
+    indent: false,
+    globals: {
+      react: 'React',
+      'react-dom': 'ReactDOM',
+      'prop-types': 'PropTypes'
+    }
+  },
+  plugins: [
+    replace({
+      'process.env.NODE_ENV': JSON.stringify('development'),
+      ...ignoreSSR
+    }),
+    resolve(),
+    typescript({
+      rollupCommonJSResolveHack: true,
+      clean: true
+    }),
+    commonjs({
+      include: 'node_modules/**',
+      namedExports
+    }),
+    terser()
+  ]
+}
