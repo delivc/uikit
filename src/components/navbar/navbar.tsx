@@ -5,11 +5,11 @@ import NavbarItem from './NavbarItem'
 import NavbarFooter from './NavbarFooter'
 import { Pane } from 'evergreen-ui'
 
-export type Props = {
+export type NavbarProps = {
   expanded: Boolean
 }
 
-export default class Navbar extends React.PureComponent<Props> {
+export default class Navbar extends React.PureComponent<NavbarProps> {
   static Logo = NavbarLogo
   static Main = NavbarMain
   static Item = NavbarItem

@@ -2,15 +2,15 @@ import * as React from 'react'
 import { Avatar, Heading, Pane, majorScale, TextDropdownButton, Popover, Position, Menu, Text } from 'evergreen-ui'
 import User from '../../models/user'
 
-export type Props = {
+export type TopnavProps = {
   locationMessage?: string
   center?: React.ReactNode
   right?: React.ReactNode
   user?: User
 }
 
-export default class Navbar extends React.Component<Props> {
-  static defaultProps: Props = {
+export default class Topnav extends React.Component<TopnavProps> {
+  static defaultProps: TopnavProps = {
     locationMessage: 'Hello, Unknown!'
   }
 
