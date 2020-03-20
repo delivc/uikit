@@ -4,6 +4,16 @@
 # dependencies
 node_modules
 
+/commonjs/
+/esm/
+/umd/
+/.out/
+/docs/public/
+.cache
+/npm-shrinkwrap.json
+/package-lock.json
+/.idea/
+
 # builds
 build
 dist
