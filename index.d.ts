@@ -1,4 +1,6 @@
 declare module '@delivc/uikit' {
+  import * as React from 'react'
+
   export interface NavbarProps {
     expanded: Boolean
   }
