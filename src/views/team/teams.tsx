@@ -5,13 +5,13 @@ import User from '../../models/user'
 import { Avatar, majorScale, Pane, Paragraph, Button, SideSheet, TextInputField, minorScale, Card, Icon, Text } from 'evergreen-ui'
 import Team from '../../models/team'
 
-export type Props = {
+export type TeamsViewProps = {
   user?: User
   workspaces?: Team[]
   onClickNew: Function
 }
 
-export type State = {
+export type TeamsViewState = {
   newCanvasVisible: boolean
 }
 
@@ -19,8 +19,8 @@ const initialState = {
   newCanvasVisible: false
 }
 
-export default class Teams extends React.Component<Props, State> {
-  state: Readonly<State> = initialState
+export default class TeamsView extends React.Component<TeamsViewProps, TeamsViewState> {
+  state: Readonly<TeamsViewState> = initialState
 
   toggleNewCanvas = () => {
     this.setState({

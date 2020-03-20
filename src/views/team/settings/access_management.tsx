@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Avatar, Badge, Button, Card, Heading, majorScale, minorScale, Table, Text, Strong, Pane, Popover, Position, Menu, TextDropdownButton } from 'evergreen-ui'
 import { TeamMember } from '../../../models/team'
 
-type Props = {
+type TeamsSettingsAccessManagementViewProps = {
   users: TeamMember[]
   onInviteClick: Function
 }
@@ -14,14 +14,14 @@ enum Order {
   DESC
 }
 
-type State = {
+type TeamsSettingsAccessManagementViewState = {
   orderedColumn: number
   ordering: Order
 }
 
 
-export default class AccessManagement extends React.Component<Props, State> {
-  state: Readonly<State> = {
+export default class TeamsSettingsAccessManagementView extends React.Component<TeamsSettingsAccessManagementViewProps, TeamsSettingsAccessManagementViewState> {
+  state: Readonly<TeamsSettingsAccessManagementViewState> = {
     orderedColumn: 1,
     ordering: Order.NONE
   }

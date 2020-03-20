@@ -2,16 +2,16 @@ import * as React from 'react'
 import Topnav from '../../../components/topnav/topnav'
 import { Card, Heading, majorScale, Pane, Button, TextInput, IconButton } from 'evergreen-ui'
 
-export type Props = {
+export type TeamSettingsInviteViewProps = {
   onCancel: Function
   onInvite: Function
 }
-export type State = {
+export type TeamSettingsInviteViewState = {
   emails: string[]
 }
 
-export default class InviteMember extends React.Component<Props, State> {
-  state: Readonly<State> = {
+export default class TeamSettingsInviteView extends React.Component<TeamSettingsInviteViewProps, TeamSettingsInviteViewState> {
+  state: Readonly<TeamSettingsInviteViewState> = {
     emails: ['']
   }
 

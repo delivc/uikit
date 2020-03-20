@@ -36,11 +36,11 @@ const schema = yup.object().shape({
       )
 })
 
-type Props = {
+type SignupViewProps = {
   onSubmit: Function
 }
 
-const SignUp: React.FC<Props> = (props) => {
+const SignupView: React.FC<SignupViewProps> = (props) => {
   const [loading, setLoading] = useState<boolean>(false)
   const { control, errors, handleSubmit } = useForm({
     validationSchema: schema
@@ -147,4 +147,4 @@ const SignUp: React.FC<Props> = (props) => {
   )
 }
 
-export default SignUp
+export default SignupView

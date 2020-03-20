@@ -3,17 +3,17 @@ import { Button, Card,  Heading, majorScale, Pane, TextInputField } from 'evergr
 import Team from '../../../models/team'
 
 
-export type Props = {
+export type TeamsSettingsGeneralViewProps = {
   team: Team
   onSubmit: Function
 }
-export type State = {
+export type TeamsSettingsGeneralViewState = {
   id: string
   name: string
 }
 
-export default class TeamGeneralSettings extends React.Component<Props, State> {
-  state: Readonly<State> = {
+export default class TeamsSettingsGeneralView extends React.Component<TeamsSettingsGeneralViewProps, TeamsSettingsGeneralViewState> {
+  state: Readonly<TeamsSettingsGeneralViewState> = {
     id: this.props.team.id,
     name: this.props.team.name
   }

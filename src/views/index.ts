@@ -5,17 +5,13 @@ export {
   VerifyView
 } from './identity'
 
-import UserSettings from './settings/user/user'
-
-import Teams from './team/teams'
-import TeamSettingsAccessManagement from './team/settings/access_management'
-import TeamSettingsGeneral from './team/settings/general'
-import TeamSettingsInvite from './team/settings/invite'
+export {
+  UserSettingsView
+} from './settings'
 
 export {
-  UserSettings,
-  Teams,
-  TeamSettingsAccessManagement,
-  TeamSettingsGeneral,
-  TeamSettingsInvite
-}
+  TeamsView,
+  TeamsSettingsAccessManagementView,
+  TeamsSettingsGeneralView,
+  TeamSettingsInviteView
+} from './team'

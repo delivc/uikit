@@ -2,24 +2,24 @@ import * as React from 'react'
 import { Button, TextInputField, Card, IconButton, Heading, Pane, majorScale, Text, Dialog } from 'evergreen-ui'
 import Topnav from '../../../components/topnav/topnav'
 
-export type Props = {
+export type UserSettingsViewProps = {
   onClose: Function
   onProfileSubmit: Function
   onPasswordSubmit: Function
 }
 
-export type State = {
+export type UserSettingsViewState = {
   passwordDialogIsShown: boolean
 }
 
-const initialState: State = {
+const initialState: UserSettingsViewState = {
   passwordDialogIsShown: false
 }
 
-const toggleDialogState = (prevState: State) => ({ passwordDialogIsShown: !prevState.passwordDialogIsShown})
+const toggleDialogState = (prevState: UserSettingsViewState) => ({ passwordDialogIsShown: !prevState.passwordDialogIsShown})
 
-export default class User extends React.Component<Props, State> {
-  state: Readonly<State> = initialState
+export default class UserSettingsView extends React.Component<UserSettingsViewProps, UserSettingsViewState> {
+  state: Readonly<UserSettingsViewState> = initialState
 
   togglePasswordDialog = () => {
     this.setState(toggleDialogState)

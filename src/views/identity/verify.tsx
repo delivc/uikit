@@ -12,12 +12,12 @@ const Header = styled.header`
   margin-bottom: 2rem;
 `
 
-export type Props = {
+export type VerifyViewProps = {
   email: String,
   onResend: Function
 }
 
-export default class Verify extends React.Component<Props> {
+export default class VerifyView extends React.Component<VerifyViewProps> {
   render () {
     const { email, onResend } = this.props
     return (

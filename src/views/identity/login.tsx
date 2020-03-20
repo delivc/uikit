@@ -10,7 +10,7 @@ const Header = styled.header`
   margin-bottom: 2rem;
 `
 
-export type Props = {
+export type LoginViewProps = {
   onSubmit: Function
   forgotPasswordLink: string
   signUpLink: string
@@ -21,7 +21,7 @@ export type FormData = {
   password: string
 }
 
-const Login: React.FC<Props> = (props) => {
+const LoginView: React.FC<LoginViewProps> = (props) => {
   const { control, errors, handleSubmit } = useForm<FormData>()
 
   const callback = () => {
@@ -109,4 +109,4 @@ const Login: React.FC<Props> = (props) => {
     )
 }
 
-export default Login
+export default LoginView
