@@ -8,5 +8,9 @@ export {
   ForgotPasswordView,
   LoginView,
   SignupView,
-  VerifyView
+  VerifyView,
+  TeamsView,
+  TeamsSettingsAccessManagementView,
+  TeamsSettingsGeneralView,
+  TeamSettingsInviteView
 } from './views'
